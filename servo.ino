@@ -6,10 +6,10 @@
 #include <Ultrasonic.h>
 #include <ESP32Servo.h>
 
-#define WIFI_SSID "YunTech_5G"
-#define WIFI_PASSWORD "12341234"
-#define API_KEY "AIzaSyDhxS8c718wJtTyPzSTkupguVo3FP8dT40"
-#define DATABASE_URL "https://shgo-64872-default-rtdb.asia-southeast1.firebasedatabase.app/"
+#define WIFI_SSID "your_wifi"
+#define WIFI_PASSWORD "your_password"
+#define API_KEY "your_key"
+#define DATABASE_URL "your_url"
 
 FirebaseData fbdo;
 FirebaseAuth auth;
