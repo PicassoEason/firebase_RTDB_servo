@@ -6,10 +6,10 @@
 #include <Ultrasonic.h>
 #include <ESP32Servo.h>
 
-#define WIFI_SSID "your_wifi"
-#define WIFI_PASSWORD "your_password"
-#define API_KEY "your_key"
-#define DATABASE_URL "your_url"
+#define WIFI_SSID "YunTech_5G"
+#define WIFI_PASSWORD "12341234"
+#define API_KEY "AIzaSyDhxS8c718wJtTyPzSTkupguVo3FP8dT40"
+#define DATABASE_URL "https://shgo-64872-default-rtdb.asia-southeast1.firebasedatabase.app/"
 
 FirebaseData fbdo;
 FirebaseAuth auth;
@@ -21,7 +21,7 @@ bool data=false; // upload data
 float voltage=0.0; 
 
 Servo servoN1;
-Ultrasonic ultrasonic(32,33 );
+Ultrasonic ultrasonic(32,33);
 int distance;
 
 void setup() {
@@ -64,14 +64,14 @@ void loop() {
     Serial.println(distance);
     if(distance<=35)
     {
-      data=true;
+      data=false;
       servoN1.write(90);
       Serial.println("there has something...");
       delay(1000);
     }
     else
     {
-      data=false;
+      data=true;
       servoN1.write(0);
       Serial.println("nothing is here...");
       delay(1000);
